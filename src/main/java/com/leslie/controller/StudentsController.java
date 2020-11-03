@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import redis.clients.jedis.Jedis;
 
 import java.util.List;
 
@@ -32,5 +33,21 @@ public class StudentsController {
             System.out.println(students.toString());
         });
         return studentsList;
+    }
+
+    @RequestMapping("redisTest")
+    @ResponseBody
+    public String redisTest(){
+
+        Jedis jedis = new Jedis("134.175.174.110",6379);
+
+        jedis.setex("leslie", 10,"leslie-value");
+
+        String value = jedis.get("leslie");
+
+        System.out.println(value);
+
+        return value;
+
     }
 }
