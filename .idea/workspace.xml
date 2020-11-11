@@ -1,201 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="85561c09-bfcc-4174-ae8c-67510624b3a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myBatisPlusDemo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/StudentMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pojo/Students.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/controller/Cov19Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/mapper/Cov19Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/Cov19CnRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/service/Cov19Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/service/impl/Cov19ServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/utils/JsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/utils/RemoteUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/leslie/StudentsMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/leslie/StudentsMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/controller/StudentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/controller/StudentsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/mapper/ClassesMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/mapper/ClassesMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/pojo/Classes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/pojo/Classes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/pojo/Students.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/pojo/Students.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/leslie/StudentsMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/leslie/StudentsMapperTest.class" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1033844285">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="2" />
-          <entry key="xml" value="1" />
-          <entry key="yaml" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="2" />
-          <entry key="XML" value="1" />
-          <entry key="YAML" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="2" />
-          <entry key="xml" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="2" />
-          <entry key="XML" value="2" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-697" />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\my_java\maven_repository" />
-        <option name="mavenHome" value="E:/mymaven/apache-maven-3.5.2" />
-        <option name="userSettingsFile" value="E:\mymaven\apache-maven-3.5.2\conf\settings.xml" />
+        <option name="localRepository" value="D:\Users\leslie.lai\environment\mavenlib" />
+        <option name="mavenHome" value="D:\Users\leslie.lai\environment\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\Users\leslie.lai\environment\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="270" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="940" />
-  </component>
+  <component name="ProjectId" id="1k8LIs9RTq4JHpgnu9Tb7DA735A" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leslie" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leslie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leslie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leslie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leslie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="leslie" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leslie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="leslie" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leslie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="MyBatisLogPluginindexNum" value="12" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1604386207480" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/leslie" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.leslie.pojo" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.leslie.mapper" />
+      <recent name="com.leslie.service" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="myBatisPlusDemo" />
+  <component name="RunManager" selected="Spring Boot.App (1)">
+    <configuration name="StudentsMapperTest.test6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="leslie" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leslie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.leslie" />
+      <option name="MAIN_CLASS_NAME" value="com.leslie.StudentsMapperTest" />
+      <option name="METHOD_NAME" value="test6" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="leslie" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leslie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.leslie.App" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.App (1)" />
+      <item itemvalue="JUnit.StudentsMapperTest.test6" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.App (1)" />
+        <item itemvalue="JUnit.StudentsMapperTest.test6" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -208,83 +152,88 @@
       <option name="presentableId" value="Default" />
       <updated>1604385867844</updated>
       <workItem from="1604385873808" duration="230000" />
+      <workItem from="1605077196636" duration="15107000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="327000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="818" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.44671533" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="RestServices" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Bean Validation" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/StudentsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="45" column="43" lean-forward="true" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="590" y="114" key="#App" timestamp="1605078133435">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="590" y="114" key="#App/0.0.1920.1040@0.0.1920.1040" timestamp="1605078133435" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605078147829">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605078147829" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1605090871841">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605090871841" />
+    <state x="948" y="232" key="FileChooserDialogImpl" timestamp="1605077769528">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="948" y="232" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605077769528" />
+    <state width="1877" height="391" key="GridCell.Tab.0.bottom" timestamp="1605096736250">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="391" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605096736250" />
+    <state width="1877" height="391" key="GridCell.Tab.0.center" timestamp="1605096736249">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="391" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605096736249" />
+    <state width="1877" height="391" key="GridCell.Tab.0.left" timestamp="1605096736249">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="391" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605096736249" />
+    <state width="1877" height="391" key="GridCell.Tab.0.right" timestamp="1605096736250">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="391" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605096736250" />
+    <state width="1877" height="391" key="GridCell.Tab.1.bottom" timestamp="1605096736253">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="391" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605096736253" />
+    <state width="1877" height="391" key="GridCell.Tab.1.center" timestamp="1605096736250">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="391" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605096736250" />
+    <state width="1877" height="391" key="GridCell.Tab.1.left" timestamp="1605096736250">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="391" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605096736250" />
+    <state width="1877" height="391" key="GridCell.Tab.1.right" timestamp="1605096736250">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="391" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605096736250" />
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1605081480970">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605081480970" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1605077775669">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605077775669" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1605077493917">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1605077493917" />
+    <state x="759" y="297" key="chooseDestDirectoryDialog" timestamp="1605088635967">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="759" y="297" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605088635967" />
   </component>
 </project>

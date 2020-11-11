@@ -1,17 +1,22 @@
 package com.leslie;
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.leslie.mapper.ClassesMapper;
 import com.leslie.mapper.StudentsMapper;
 import com.leslie.pojo.Classes;
+import com.leslie.pojo.Cov19CnRecord;
 import com.leslie.pojo.Students;
+import com.leslie.utils.RemoteUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,8 +27,7 @@ public class StudentsMapperTest  {
     @Autowired
     private StudentsMapper studentsMapper;
 
-    @Autowired
-    private ClassesMapper classesMapper;
+
 
     @Test
    public void test(){
@@ -34,19 +38,7 @@ public class StudentsMapperTest  {
 
     }
 
-    @Test
-    public void test1(){
 
-        QueryWrapper<Students> wrapper = new QueryWrapper<>();
-
-        Classes classes = classesMapper.selectById(1);
-
-        wrapper.eq(false, "classes", classes);
-
-        List<Students> students = studentsMapper.selectList(wrapper);
-
-        System.out.println(students);
-    }
 
     @Test
     public void test2(){
@@ -56,13 +48,6 @@ public class StudentsMapperTest  {
         studentAndClasses.forEach(System.out::println);
     }
 
-    @Test
-    public void test3(){
-        List<Classes> classesAndStudents = classesMapper.findClassesAndStudents();
-
-        classesAndStudents.forEach(System.out::println);
-
-    }
 
     @Test
     public void test4(){
@@ -88,6 +73,16 @@ public class StudentsMapperTest  {
 
         System.out.println(integer);
 
+    }
+
+    @Test
+    public void test6() throws Exception {
+        String url = "https://api.yonyoucloud.com/apis/dst/ncov/country";
+        Map<String,String > headers = new HashMap<>();
+        headers.put("apicode","4fa69c43e75f4779b6bc50177e361ee5");
+        String remoteData = RemoteUtils.getRemoteData(url, new HashMap<>(), headers);
+        Cov19CnRecord record = JSON.parseObject(JSON.parseObject(remoteData).getString("data"), Cov19CnRecord.class);
+        System.out.println(record);
     }
 
 }
