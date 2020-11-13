@@ -12,8 +12,5 @@ public class Cov19ServiceImpl implements Cov19Service {
     @Autowired
     private Cov19Mapper cov19Mapper;
 
-    @Override
-    public Cov19CnRecord getRealTimeRecord() {
-        return null;
-    }
+
 }

@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -60,13 +61,13 @@ public class RemoteUtils {
 //        创建请求客户端
         CloseableHttpClient client = HttpClients.createDefault();
         HttpResponse response = null;
-        LOGGER.info("execute get request url{}",url);
-        String string ="";
+        LOGGER.info("execute get request url:{}",url);
+        String rep ="";
         try {
 //        执行get请求
             response = client.execute(request);
             //获得返回的数据
-            string = EntityUtils.toString(response.getEntity(), "UTF-8");
+            rep = EntityUtils.toString(response.getEntity(), "UTF-8");
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
@@ -76,6 +77,11 @@ public class RemoteUtils {
                 e.printStackTrace();
             }
         }
-        return string;
+        return rep;
     }
+
+    public static String getRemoteData(String url){
+        return getRemoteData(url,new HashMap<String,String>(),new HashMap<String, String>());
+    }
+
 }

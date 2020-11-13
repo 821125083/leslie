@@ -3,11 +3,8 @@ package com.leslie;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.leslie.mapper.ClassesMapper;
-import com.leslie.mapper.StudentsMapper;
-import com.leslie.pojo.Classes;
+
 import com.leslie.pojo.Cov19CnRecord;
-import com.leslie.pojo.Students;
 import com.leslie.utils.RemoteUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,56 +21,7 @@ import java.util.Map;
 @RunWith(SpringRunner.class)
 public class StudentsMapperTest  {
 
-    @Autowired
-    private StudentsMapper studentsMapper;
 
-
-
-    @Test
-   public void test(){
-
-        List<Students> students = studentsMapper.selectList(null);
-
-        students.forEach(System.out::println);
-
-    }
-
-
-
-    @Test
-    public void test2(){
-
-        List<Students> studentAndClasses = studentsMapper.findStudentAndClasses();
-
-        studentAndClasses.forEach(System.out::println);
-    }
-
-
-    @Test
-    public void test4(){
-
-        QueryWrapper<Students> wrapper = new QueryWrapper<>();
-
-        wrapper.eq("name", "leslie");
-
-        List<Students> students = studentsMapper.selectList(wrapper);
-
-        students.forEach(System.out::println);
-    }
-
-    @Test
-    public void test5(){
-
-
-        QueryWrapper<Students> wrapper  =  new QueryWrapper<>();
-
-        wrapper.ge("age", 15);
-
-        Integer integer = studentsMapper.selectCount(wrapper);
-
-        System.out.println(integer);
-
-    }
 
     @Test
     public void test6() throws Exception {

@@ -5,5 +5,8 @@ import org.springframework.stereotype.Service;
 
 
 public interface Cov19Service {
-    Cov19CnRecord getRealTimeRecord();
+    /**
+     * 获得全球各大洲疫情实时数据
+     */
+
 }
