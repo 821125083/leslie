@@ -32,7 +32,7 @@ public class RemoteUtils {
      * @param params 请求拼接参数
      * @param headers 请求头
      * @return
-     * @throws Exception
+     *
      */
     public static String getRemoteData(String url, Map<String,String> params ,Map<String,String > headers) {
         //拼接请求参数

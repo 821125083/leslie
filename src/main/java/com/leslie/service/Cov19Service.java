@@ -1,12 +1,18 @@
 package com.leslie.service;
 
 import com.leslie.pojo.Cov19CnRecord;
+import com.leslie.pojo.Trend;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 
 public interface Cov19Service {
     /**
-     * 获得全球各大洲疫情实时数据
+     *
+     * @return
      */
+    List<Trend> cov19TrendLineChart();
+
 
 }
