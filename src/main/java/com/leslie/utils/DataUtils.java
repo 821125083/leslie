@@ -35,26 +35,26 @@ public class DataUtils {
      * @return
      */
     public void initCity() {
-        HashMap<String, String> header = new HashMap<>();
-        header.put("authoration", "apicode");
-        header.put("apicode", Const.apiCode);
-        String remoteData = RemoteUtils.getRemoteData(Const.MAPUrl, new HashMap<String, String>(), header);
-        Province gd = new Province();
-        List<Province> provinces = JSONObject.parseArray(JSON.parseObject(remoteData).get("newslist").toString(), Province.class);
-        for (Province province1 : provinces) {
-            QueryWrapper<Province> wrapper = new QueryWrapper<>();
-            wrapper.eq("province_name", province1.getProvinceName());
-            Province province2 = provinceMapper.selectOne(wrapper);   //有id   province1 有city
-            province1.setId(province2.getId());
-        }
-        for (Province province1 : provinces) {
-            if (province1.getCities().size() > 0) {
-                for (City city : province1.getCities()) {
-                    city.setProvinceId(province1.getId());
-                    cityMapper.insert(city);
-                }
-            }
-        }
+//        HashMap<String, String> header = new HashMap<>();
+//        header.put("authoration", "apicode");
+//        header.put("apicode", Const.apiCode);
+//        String remoteData = RemoteUtils.getRemoteData(Const.MAPUrl, new HashMap<String, String>(), header);
+//        Province gd = new Province();
+//        List<Province> provinces = JSONObject.parseArray(JSON.parseObject(remoteData).get("newslist").toString(), Province.class);
+//        for (Province province1 : provinces) {
+//            QueryWrapper<Province> wrapper = new QueryWrapper<>();
+//            wrapper.eq("province_name", province1.getProvinceName());
+//            Province province2 = provinceMapper.selectOne(wrapper);   //有id   province1 有city
+//            province1.setId(province2.getId());
+//        }
+//        for (Province province1 : provinces) {
+//            if (province1.getCities().size() > 0) {
+//                for (City city : province1.getCities()) {
+//                    city.setProvinceId(province1.getId());
+//                    cityMapper.insert(city);
+//                }
+//            }
+//        }
 
     }
 

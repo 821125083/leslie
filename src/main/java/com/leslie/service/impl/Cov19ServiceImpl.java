@@ -2,6 +2,7 @@ package com.leslie.service.impl;
 
 import com.leslie.mapper.Cov19Mapper;
 import com.leslie.pojo.Cov19CnRecord;
+import com.leslie.pojo.Province;
 import com.leslie.pojo.Trend;
 import com.leslie.service.Cov19Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,5 +20,10 @@ public class Cov19ServiceImpl implements Cov19Service {
     @Override
     public List<Trend> cov19TrendLineChart() {
         return cov19Mapper.selectList(null);
+    }
+
+    @Override
+    public List<Province> cov19CnProvincesData() {
+        return null;
     }
 }

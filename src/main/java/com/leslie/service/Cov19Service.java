@@ -1,6 +1,7 @@
 package com.leslie.service;
 
 import com.leslie.pojo.Cov19CnRecord;
+import com.leslie.pojo.Province;
 import com.leslie.pojo.Trend;
 import org.springframework.stereotype.Service;
 
@@ -15,4 +16,5 @@ public interface Cov19Service {
     List<Trend> cov19TrendLineChart();
 
 
+    List<Province> cov19CnProvincesData();
 }

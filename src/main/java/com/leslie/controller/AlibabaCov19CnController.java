@@ -1,6 +1,7 @@
 package com.leslie.controller;
 
 import com.leslie.cons.Const;
+import com.leslie.pojo.Province;
 import com.leslie.pojo.Trend;
 import com.leslie.service.Cov19Service;
 import com.leslie.utils.AlibabaUtils;
@@ -25,12 +26,21 @@ public class AlibabaCov19CnController {
     private Cov19Service cov19Service;
 
     @RequestMapping("Ali")
-    public String alibabaTest(){
-        return AlibabaUtils.requestAlibabaData();
+    public ResultVO alibabaTest(){
+        return ResultVO.success(AlibabaUtils.requestAlibabaData());
     }
 
     @RequestMapping("Cov19TrendLineChart")
     public ResultVO trendCnList(){
         return ResultVO.success(cov19Service.cov19TrendLineChart());
+    }
+
+    @RequestMapping("Provinces")
+    public ResultVO provinces(){
+        ResultVO result = ResultVO.success();
+
+        List<Province> provinces = cov19Service.cov19CnProvincesData();
+
+        return result;
     }
 }

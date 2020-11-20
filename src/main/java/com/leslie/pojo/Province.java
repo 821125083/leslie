@@ -17,33 +17,19 @@ public class Province {
     @TableId(type = IdType.AUTO)
     private Integer id;
 
-    @TableField("province_name")
+    @JSONField(alternateNames = "childStatistic")
     private String provinceName;
 
-    @TableField("province_short_name")
-    private String provinceShortName;
 
-    @TableField("comments")
-    @JSONField(alternateNames = "comment")
-    private String comments;
+    @JSONField(alternateNames = "cityArray")
+    private City cityList;
 
-    @TableField(exist = false)
-    private List<City> cities;
-
-    public String getComments() {
-        return comments;
+    public City getCityList() {
+        return cityList;
     }
 
-    public void setComments(String comments) {
-        this.comments = comments;
-    }
-
-    public String getProvinceShortName() {
-        return provinceShortName;
-    }
-
-    public void setProvinceShortName(String provinceShortName) {
-        this.provinceShortName = provinceShortName;
+    public void setCityList(City cityList) {
+        this.cityList = cityList;
     }
 
     public Integer getId() {
@@ -61,24 +47,5 @@ public class Province {
     public void setProvinceName(String provinceName) {
         this.provinceName = provinceName;
     }
-
-
-    public List<City> getCities() {
-        return cities;
-    }
-
-    public void setCities(List<City> cities) {
-        this.cities = cities;
-    }
-
-    @Override
-    public String toString() {
-        return "Province{" +
-                "id=" + id +
-                ", provinceName='" + provinceName + '\'' +
-                ", provinceShortName='" + provinceShortName + '\'' +
-                ", comments='" + comments + '\'' +
-                ", cities=" + cities +
-                '}';
-    }
+    
 }

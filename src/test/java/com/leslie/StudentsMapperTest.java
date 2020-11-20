@@ -7,7 +7,9 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 
 import com.leslie.mapper.TrendMapper;
 import com.leslie.pojo.Cov19CnRecord;
+import com.leslie.pojo.Province;
 import com.leslie.pojo.Trend;
+import com.leslie.utils.AlibabaUtils;
 import com.leslie.utils.DataUtils;
 import com.leslie.utils.RemoteUtils;
 import org.junit.Test;
@@ -59,6 +61,15 @@ public class StudentsMapperTest  {
         trends.forEach(t->{
             trendMapper.insert(t);
         });
+    }
+
+    @Test
+    public void test2(){
+        String s = AlibabaUtils.requestAlibabaData();
+        JSONObject jsonObject = JSON.parseObject(s);
+        Object provinceArray = jsonObject.get("provinceArray");
+        List<Province> provinces = JSONObject.parseArray(provinceArray.toString(), Province.class);
+        provinces.forEach(System.out::println);
     }
 
 }
