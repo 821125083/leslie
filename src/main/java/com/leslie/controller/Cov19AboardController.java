@@ -48,4 +48,13 @@ public class Cov19AboardController {
         return remoteData;
     }
 
+    /**
+     * 全球数据接口
+     * @return
+     */
+    @RequestMapping("test")
+    public String test(){
+        return RemoteUtils.getRemoteData("https://cdn.mdeer.com/data/yqstaticdata.js");
+    }
+
 }

@@ -39,7 +39,7 @@ public class Cov19CnController {
 
     @Autowired
     private Cov19Mapper cov19Mapper;
-    
+
     @Autowired
     private ProvinceMapper provinceMapper;
 
@@ -47,44 +47,45 @@ public class Cov19CnController {
     private CityMapper cityMapper;
 
     /**
-     *
      * @return 疫情实时数据
-     * */
+     */
     @RequestMapping("/realTimeRecord")
-    public Cov19CnRecord getRealTimeRecord(){
-        Map<String,String> headers = new HashMap<>();
+    public Cov19CnRecord getRealTimeRecord() {
+        Map<String, String> headers = new HashMap<>();
         headers.put("apicode", Const.apiCode);
 
         String data = RemoteUtils.getRemoteData(Const.CNUrl, new HashMap<>(), headers);
 
         Cov19CnRecord record = JSON.parseObject(JSON.parseObject(data).getString("data"), Cov19CnRecord.class);
-        record.setDescription(record.getDescription().replaceAll(" ","" ));
-        record.setSourceDesc(record.getSourceDesc().replaceAll(" ","" ));
-        cov19Mapper.insert(record);
+        record.setDescription(record.getDescription().replaceAll(" ", ""));
+        record.setSourceDesc(record.getSourceDesc().replaceAll(" ", ""));
         return record;
     }
 
     /**
      * 国内各省地图疫情情况
+     *
      * @return
      */
     @RequestMapping("CNRealTimeRecord")
-    public String getCNRealTimeRecord(){
+    public String getCNRealTimeRecord() {
         HashMap<String, String> header = new HashMap<>();
-        header.put("authoration","apicode");
-        header.put("apicode",Const.apiCode);
+        header.put("authoration", "apicode");
+        header.put("apicode", Const.apiCode);
         return RemoteUtils.getRemoteData(Const.MAPUrl, new HashMap<String, String>(), header);
     }
+
     /**
      * 获得某省数据
+     *
      * @param province 查询省份信息
      * @return
      */
     @RequestMapping("CNRealTimeRecord/{province}")
-    public String CNRealTimeRecordByProvince(@PathVariable String province){
+    public String CNRealTimeRecordByProvince(@PathVariable String province) {
         HashMap<String, String> header = new HashMap<>();
-        header.put("authoration","apicode");
-        header.put("apicode",Const.apiCode);
+        header.put("authoration", "apicode");
+        header.put("apicode", Const.apiCode);
         String remoteData = RemoteUtils.getRemoteData(Const.MAPUrl, new HashMap<String, String>(), header);
         Province gd = new Province();
 
@@ -94,93 +95,4 @@ public class Cov19CnController {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /**
-     * 获得某省数据
-     * @param province 查询省份信息
-     * @return
-     */
-    @Deprecated
-    @RequestMapping("CNRealTimeRecord/{province}/test")
-    public String initCity(@PathVariable String province){
-        HashMap<String, String> header = new HashMap<>();
-        header.put("authoration","apicode");
-        header.put("apicode",Const.apiCode);
-        String remoteData = RemoteUtils.getRemoteData(Const.MAPUrl, new HashMap<String, String>(), header);
-        Province gd = new Province();
-        List<Province> provinces = JSONObject.parseArray(JSON.parseObject(remoteData).get("newslist").toString(),Province.class);
-        for (Province province1 : provinces) {
-            QueryWrapper<Province> wrapper = new QueryWrapper<>();
-            wrapper.eq("province_name",province1.getProvinceName());
-            Province province2 = provinceMapper.selectOne(wrapper);   //有id   province1 有city
-            province1.setId(province2.getId());
-        }
-        for (Province province1 : provinces) {
-            if (province1.getCities().size()>0){
-                for (City city : province1.getCities()) {
-                    city.setProvinceId(province1.getId());
-                    cityMapper.insert(city);
-                }
-            }
-        }
-        return gd.toString();
-    }
 }

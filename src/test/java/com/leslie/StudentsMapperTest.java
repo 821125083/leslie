@@ -1,10 +1,14 @@
 package com.leslie;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 
+import com.leslie.mapper.TrendMapper;
 import com.leslie.pojo.Cov19CnRecord;
+import com.leslie.pojo.Trend;
+import com.leslie.utils.DataUtils;
 import com.leslie.utils.RemoteUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,6 +25,8 @@ import java.util.Map;
 @RunWith(SpringRunner.class)
 public class StudentsMapperTest  {
 
+    @Autowired
+    private TrendMapper trendMapper;
 
 
     @Test
@@ -31,6 +37,28 @@ public class StudentsMapperTest  {
         String remoteData = RemoteUtils.getRemoteData(url, new HashMap<>(), headers);
         Cov19CnRecord record = JSON.parseObject(JSON.parseObject(remoteData).getString("data"), Cov19CnRecord.class);
         System.out.println(record);
+    }
+
+    @Test
+    public void test7(){
+        String remoteData = RemoteUtils.getRemoteData("https://cdn.mdeer.com/data/yqstaticdata.js");
+        System.out.println(remoteData);
+    }
+
+    /**
+     * 初始化数据
+     */
+    @Test
+    public void test(){
+        String s = DataUtils.initEveryDayData();
+        JSONObject object = JSON.parseObject(s);
+        Object trend = object.get("trend");
+
+
+        List<Trend> trends = JSONObject.parseArray(trend.toString(), Trend.class);
+        trends.forEach(t->{
+            trendMapper.insert(t);
+        });
     }
 
 }
