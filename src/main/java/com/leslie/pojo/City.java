@@ -1,6 +1,7 @@
 package com.leslie.pojo;
 
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -16,6 +17,7 @@ public class City {
     private Integer id;
 
     @TableField("city_name")
+    @JSONField(alternateNames = "childStatistic")
     private String cityName;
 
     @TableField("province_id")

@@ -23,6 +23,13 @@ public class ResultVO {
         return result;
     }
 
+    public static ResultVO error(String message) {
+        ResultVO result = new ResultVO();
+        result.setCode(500);
+        result.setMessage(message);
+        return result;
+    }
+
     public ResultVO() {
     }
 
@@ -31,6 +38,8 @@ public class ResultVO {
         this.message = message;
         this.data = data;
     }
+
+
 
     public Integer getCode() {
         return code;

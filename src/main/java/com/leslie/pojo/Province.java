@@ -21,14 +21,15 @@ public class Province {
     private String provinceName;
 
 
+    @TableField(exist = false)
     @JSONField(alternateNames = "cityArray")
-    private City cityList;
+    private List<City> cityList;
 
-    public City getCityList() {
+    public List<City> getCityList() {
         return cityList;
     }
 
-    public void setCityList(City cityList) {
+    public void setCityList(List<City> cityList) {
         this.cityList = cityList;
     }
 
@@ -47,5 +48,13 @@ public class Province {
     public void setProvinceName(String provinceName) {
         this.provinceName = provinceName;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Province{" +
+                "id=" + id +
+                ", provinceName='" + provinceName + '\'' +
+                ", cityList=" + cityList +
+                '}';
+    }
 }

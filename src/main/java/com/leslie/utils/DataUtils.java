@@ -61,7 +61,7 @@ public class DataUtils {
     /**
      * 抓取每日疫情数据
      */
-    public static String initEveryDayData(){
+    public static String initEveryDayData() throws Exception{
 
 
 

@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface LocationService {
     List<Province> queryAllCnProvince();
+
+    Province queryProvinceById(String provinceId);
 }

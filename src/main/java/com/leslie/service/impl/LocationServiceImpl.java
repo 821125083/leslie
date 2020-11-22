@@ -20,4 +20,9 @@ public class LocationServiceImpl implements LocationService {
     public List<Province> queryAllCnProvince() {
         return provinceMapper.selectList(null);
     }
+
+    @Override
+    public Province queryProvinceById(String provinceId) {
+        return provinceMapper.selectById(provinceId);
+    }
 }

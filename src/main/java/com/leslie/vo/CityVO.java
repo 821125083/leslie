@@ -1,11 +1,8 @@
 package com.leslie.vo;
 
 import com.leslie.pojo.City;
-import com.leslie.pojo.Province;
 
-import java.util.List;
-
-public class ProvinceVO extends Province {
+public class CityVO extends City {
 
     private Integer totalCured;
 
@@ -55,10 +52,5 @@ public class ProvinceVO extends Province {
 
     public void setTotalConfirmed(Integer totalConfirmed) {
         this.totalConfirmed = totalConfirmed;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
     }
 }
