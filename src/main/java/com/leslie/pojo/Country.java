@@ -5,26 +5,16 @@ package com.leslie.pojo;
  */
 public class Country {
 
+    private String name;
+
     private Integer id;
 
-    private String provinceName;
-
-    private Integer countryId;
-
-    public String getProvinceName() {
-        return provinceName;
+    public String getName() {
+        return name;
     }
 
-    public void setProvinceName(String provinceName) {
-        this.provinceName = provinceName;
-    }
-
-    public Integer getCountryId() {
-        return countryId;
-    }
-
-    public void setCountryId(Integer countryId) {
-        this.countryId = countryId;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Integer getId() {
@@ -33,14 +23,5 @@ public class Country {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    @Override
-    public String toString() {
-        return "Country{" +
-                "id=" + id +
-                ", provinceName='" + provinceName + '\'' +
-                ", countryId=" + countryId +
-                '}';
     }
 }

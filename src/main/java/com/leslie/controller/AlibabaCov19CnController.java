@@ -64,6 +64,7 @@ public class AlibabaCov19CnController {
         return ResultVO.success(provinceArray);
     }
 
+    //记载城市数据
     @RequestMapping("/loadCitiesByProvinceName/{provinceName}")
     public ResultVO loadCitiesByProvinceName(@PathVariable String provinceName) {
 
@@ -95,6 +96,7 @@ public class AlibabaCov19CnController {
         return ResultVO.success(cityVO);
     }
 
+    //加载条形图数据
     @RequestMapping("initBarData")
     public ResultVO initBarData(){
 
@@ -113,6 +115,7 @@ public class AlibabaCov19CnController {
         return ResultVO.success(provinces);
     }
 
+    //省表格数据
     @RequestMapping("queryProvinceBarChart/{provinceId}")
     public ResultVO queryProvinceBarChart(@PathVariable String provinceId){
 
@@ -148,7 +151,7 @@ public class AlibabaCov19CnController {
         return ResultVO.success(cityVOS);
     }
 
-
+    //
     @PostMapping("/loadCityData")
     public ResultVO loadCityData(@RequestBody HashMap<String,ArrayList<String>> map){
         Set<Map.Entry<String, ArrayList<String>>> entrySet = map.entrySet();
@@ -184,5 +187,76 @@ public class AlibabaCov19CnController {
 
         return ResultVO.success(cityVOS);
     }
+
+    // 返回地图
+    @RequestMapping("initProvincesData")
+    @ResponseBody
+    public ResultVO initProvincesData(){
+        List<ProvinceVO> provinceVOSList = null;
+        JSONObject jsonObject = null;
+        try {
+            jsonObject = AlibabaUtils.requestAlibabaJsonObject();
+        } catch (Exception e) {
+            LOGGER.error("error");
+            return ResultVO.error("阿里妈妈接口蹦了");
+        }
+        // 转化为java集合对象
+        Object provinceArray = jsonObject.get("provinceArray");
+        provinceVOSList = JSON.parseArray(provinceArray.toString(), ProvinceVO.class);
+        // 给各省份设置名字
+        formatProvinceName(provinceVOSList);
+
+        return ResultVO.success(provinceVOSList);
+    }
+
+    //给省名称欢哥名字
+    public static void formatProvinceName(List<ProvinceVO> provinceList){
+        provinceList.stream().forEach(province ->{
+            province.setProvinceName(province.getProvinceName()
+                    .replace("省", "")
+                    .replace("市","" )
+                    .replace("中国", "")
+                    .replace("自治区","" ));
+
+            if (province.getProvinceName().equals("宁夏回族")){
+                province.setProvinceName("宁夏");
+            }
+            if (province.getProvinceName().equals("广西壮族")){
+                province.setProvinceName("广西");
+            }
+            if (province.getProvinceName().equals("新疆维吾尔")){
+                province.setProvinceName("新疆");
+            }
+        });
+
+
+    }
+
+    //全球数据
+    @RequestMapping("initAllData")
+    public ResultVO initAllData(){
+        String remoteData = RemoteUtils.getRemoteData(Const.Api163);
+
+        JSONObject jsonObject = JSONObject.parseObject(remoteData);
+
+        Object data = jsonObject.get("data");
+
+        jsonObject = JSONObject.parseObject(data.toString());
+
+        Object areaTree = jsonObject.get("areaTree");
+
+        JSONArray objects = JSONObject.parseArray(areaTree.toString());
+
+        Iterator<Object> iterator = objects.iterator();
+
+        while (iterator.hasNext()){
+            Object next = iterator.next();
+
+            System.out.println(next);
+        }
+        return ResultVO.success(iterator);
+    }
+
+
 
 }

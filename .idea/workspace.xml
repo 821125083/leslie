@@ -20,32 +20,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85561c09-bfcc-4174-ae8c-67510624b3a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/exception/AliInterfaceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/vo/CityVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/config/ElasticSearchConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/controller/AlibabaCov19AbController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/controller/NewsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/controller/WeatherController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/mapper/MessageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/mapper/NewsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/AbTrend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/News.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/Weather.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/service/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/service/NewsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/service/impl/MessageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/service/impl/NewsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/test/ElasticSearchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/test/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/utils/ABUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/vo/ABTrendVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leslie/vo/CountryVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/cons/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/cons/Const.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/controller/AlibabaCov19CnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/controller/AlibabaCov19CnController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/controller/LocationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/Province.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/Province.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/service/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/service/LocationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/service/impl/LocationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/service/impl/LocationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/utils/AlibabaUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/utils/AlibabaUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/utils/DataUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/utils/DataUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/vo/ProvinceVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/vo/ProvinceVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/vo/ResultVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/vo/ResultVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/JsonBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leslie/pojo/JsonBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/leslie/StudentsMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/leslie/StudentsMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/cons/Const.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/cons/Const.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/controller/AlibabaCov19CnController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/controller/AlibabaCov19CnController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/controller/Cov19CnController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/controller/Cov19CnController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/controller/LocationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/controller/LocationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/pojo/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/pojo/City.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/pojo/Province.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/pojo/Province.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/service/LocationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/service/LocationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/service/impl/LocationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/service/impl/LocationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/utils/AlibabaUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/utils/AlibabaUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/utils/DataUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/utils/DataUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/vo/ProvinceVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/vo/ProvinceVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/vo/ResultVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/vo/ResultVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/pojo/Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/pojo/Country.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/pojo/JsonBean$CountryBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/pojo/JsonBean$DataSourceUpdateTimeBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/pojo/JsonBean$ProvinceArrayBean$CityArrayBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/pojo/JsonBean$ProvinceArrayBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/pojo/JsonBean$TrendBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/pojo/JsonBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/pojo/JsonBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/pojo/Trend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/pojo/Trend.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leslie/utils/RemoteUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leslie/utils/RemoteUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/myBatisPlusDemo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/myBatisPlusDemo-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/myBatisPlusDemo-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/myBatisPlusDemo-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.leslie.StudentsMapperTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.leslie.StudentsMapperTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.leslie.StudentsMapperTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.leslie.StudentsMapperTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/leslie/StudentsMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/leslie/StudentsMapperTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,35 +75,63 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1033844285">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
-          <entry key="java" value="25" />
+          <entry key="class" value="2" />
+          <entry key="java" value="91" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="25" />
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="91" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4332" />
+          <entry key="java" value="12116" />
+          <entry key="xml" value="69" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4332" />
+          <entry key="JAVA" value="12116" />
+          <entry key="XML" value="69" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.133" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.48" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.59" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.62" value="1" />
+          <entry key="project.open.time.64" value="1" />
+          <entry key="project.open.time.91" value="2" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
     </session>
@@ -91,10 +139,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/AlibabaCov19CnController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/NewsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="184" column="31" selection-start-line="184" selection-start-column="24" selection-end-line="184" selection-end-column="31" />
+            <state relative-caret-position="389">
+              <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,19 +151,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/utils/AlibabaUtils.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/service/impl/NewsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="20" column="34" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="34" />
+            <state relative-caret-position="361">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/LocationController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/mapper/NewsMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="133">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/pojo/News.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#646#647#0" expanded="true" />
+                <element signature="e#1373#1374#0" expanded="true" />
+                <element signature="e#1411#1412#0" expanded="true" />
+                <element signature="e#1473#1474#0" expanded="true" />
+                <element signature="e#1527#1528#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,6 +205,7 @@
       <find>maven</find>
       <find>Exception</find>
       <find>AliInterfaceException</find>
+      <find>https://cdn.mdeer.com/data/yqstaticdata.js</find>
     </findStrings>
     <replaceStrings>
       <replace>Exception</replace>
@@ -153,11 +225,35 @@
         <option value="$PROJECT_DIR$/src/main/java/com/leslie/service/impl/LocationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leslie/vo/ResultVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leslie/utils/DataUtils.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/leslie/StudentsMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leslie/exception/AliInterfaceException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leslie/utils/AlibabaUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leslie/controller/LocationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/utils/JsonUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/test/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/pojo/JsonBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/pojo/Country.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/vo/CountryVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/pojo/AbTrend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/pojo/Weather.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leslie/controller/AlibabaCov19CnController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/cons/Const.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/controller/AlibabaCov19AbController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/vo/ABTrendVo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/leslie/StudentsMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/utils/ABUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/mapper/MessageMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/service/MessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/service/impl/MessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/pojo/Message.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/test/ElasticSearchTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/config/ElasticSearchConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/controller/WeatherController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/mapper/NewsMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/pojo/News.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/service/NewsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/service/impl/NewsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leslie/controller/NewsController.java" />
       </list>
     </option>
   </component>
@@ -170,13 +266,52 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\Users\leslie.lai\environment\mavenlib" />
-        <option name="mavenHome" value="D:\Users\leslie.lai\environment\apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="D:\Users\leslie.lai\environment\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="localRepository" value="E:\my_java\maven_repository" />
+        <option name="mavenHome" value="E:/mymaven/apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="E:\mymaven\apache-maven-3.5.2\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="myBatisPlusDemo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="myBatisPlusDemo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="myBatisPlusDemo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="myBatisPlusDemo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="org.springframework.boot:spring-boot-starter-data-elasticsearch:2.2.6.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="myBatisPlusDemo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="org.springframework.boot:spring-boot-starter-data-elasticsearch:2.2.6.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+          <item name="org.springframework.data:spring-data-elasticsearch:3.2.6.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="270" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -189,6 +324,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,6 +366,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="leslie" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leslie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="leslie" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -247,42 +393,49 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="leslie" type="462c0819:PsiDirectoryNode" />
-              <item name="vo" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="leslie" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leslie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leslie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leslie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="leslie" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leslie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="leslie" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leslie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="leslie" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myBatisPlusDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leslie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="leslie" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -296,26 +449,27 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="message&#9;FILE&#9;file://C:/Users/来子哥/Desktop/GraDesgine/leslie/src/main/java/com/leslie/service/impl/MessageServiceImpl.java&#10;const&#9;FILE&#9;file://C:/Users/来子哥/Desktop/GraDesgine/leslie/src/main/java/com/leslie/cons/Const.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606016499668" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1608977874484" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/leslie" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/plcs2" />
+    <property name="last_opened_file_path" value="E:/JavaProject" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.leslie.pojo" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.leslie.pojo" />
       <recent name="com.leslie.mapper" />
       <recent name="com.leslie.service" />
+      <recent name="com.leslie.pojo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -331,7 +485,23 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.App">
-    <configuration name="StudentsMapperTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ElasticSearchTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myBatisPlusDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leslie.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.leslie.test" />
+      <option name="MAIN_CLASS_NAME" value="com.leslie.test.ElasticSearchTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentsMapperTest.test10" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="myBatisPlusDemo" />
       <extension name="coverage">
         <pattern>
@@ -341,7 +511,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.leslie" />
       <option name="MAIN_CLASS_NAME" value="com.leslie.StudentsMapperTest" />
-      <option name="METHOD_NAME" value="test4" />
+      <option name="METHOD_NAME" value="test10" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentsMapperTest.test12" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myBatisPlusDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leslie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.leslie" />
+      <option name="MAIN_CLASS_NAME" value="com.leslie.StudentsMapperTest" />
+      <option name="METHOD_NAME" value="test12" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentsMapperTest.test13" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myBatisPlusDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leslie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.leslie" />
+      <option name="MAIN_CLASS_NAME" value="com.leslie.StudentsMapperTest" />
+      <option name="METHOD_NAME" value="test13" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -362,12 +564,18 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.App" />
-      <item itemvalue="JUnit.StudentsMapperTest.test4" />
+      <item itemvalue="JUnit.StudentsMapperTest.test10" />
+      <item itemvalue="JUnit.StudentsMapperTest.test12" />
+      <item itemvalue="JUnit.StudentsMapperTest.test13" />
+      <item itemvalue="JUnit.ElasticSearchTest.test1" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.App" />
-        <item itemvalue="JUnit.StudentsMapperTest.test4" />
+        <item itemvalue="JUnit.ElasticSearchTest.test1" />
+        <item itemvalue="JUnit.StudentsMapperTest.test13" />
+        <item itemvalue="JUnit.StudentsMapperTest.test12" />
+        <item itemvalue="JUnit.StudentsMapperTest.test10" />
       </list>
     </recent_temporary>
   </component>
@@ -390,50 +598,69 @@
       <workItem from="1605346843377" duration="694000" />
       <workItem from="1605580800924" duration="11423000" />
       <workItem from="1605614230852" duration="7938000" />
-      <workItem from="1606030922641" duration="10946000" />
+      <workItem from="1606030922641" duration="17190000" />
+      <workItem from="1606285028676" duration="3340000" />
+      <workItem from="1606299017018" duration="18491000" />
+      <workItem from="1606635743533" duration="11983000" />
+      <workItem from="1606898953165" duration="664000" />
+      <workItem from="1607519968916" duration="8601000" />
+      <workItem from="1607752482979" duration="1338000" />
+      <workItem from="1607846776445" duration="114000" />
+      <workItem from="1608952021973" duration="12093000" />
+      <workItem from="1609507550108" duration="613000" />
+      <workItem from="1609560246780" duration="6805000" />
+      <workItem from="1610083259584" duration="576000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StudentsMapperTest_test7 - 2020.11.20 at 23h 24m 48s.xml">
-      <configuration name="StudentsMapperTest.test7" configurationId="JUnit" />
+    <history-entry file="StudentsMapperTest_test13 - 2020.11.29 at 22h 57m 07s.xml">
+      <configuration name="StudentsMapperTest.test13" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentsMapperTest_test7 - 2020.11.20 at 23h 26m 31s.xml">
-      <configuration name="StudentsMapperTest.test7" configurationId="JUnit" />
+    <history-entry file="StudentsMapperTest_test13 - 2020.11.29 at 22h 58m 06s.xml">
+      <configuration name="StudentsMapperTest.test13" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentsMapperTest_test7 - 2020.11.20 at 23h 50m 11s.xml">
-      <configuration name="StudentsMapperTest.test7" configurationId="JUnit" />
+    <history-entry file="StudentsMapperTest_test13 - 2020.12.09 at 21h 38m 28s.xml">
+      <configuration name="StudentsMapperTest.test13" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentsMapperTest_test7 - 2020.11.20 at 23h 50m 24s.xml">
-      <configuration name="StudentsMapperTest.test7" configurationId="JUnit" />
+    <history-entry file="ElasticSearchTest_test1 - 2020.12.26 at 12h 07m 10s.xml">
+      <configuration name="ElasticSearchTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentsMapperTest_test4 - 2020.11.21 at 13h 02m 49s.xml">
-      <configuration name="StudentsMapperTest.test4" configurationId="JUnit" />
+    <history-entry file="ElasticSearchTest_test1 - 2020.12.26 at 12h 19m 38s.xml">
+      <configuration name="ElasticSearchTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentsMapperTest_test4 - 2020.11.21 at 13h 14m 14s.xml">
-      <configuration name="StudentsMapperTest.test4" configurationId="JUnit" />
+    <history-entry file="ElasticSearchTest_test1 - 2020.12.26 at 12h 52m 17s.xml">
+      <configuration name="ElasticSearchTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentsMapperTest_test4 - 2020.11.21 at 13h 15m 02s.xml">
-      <configuration name="StudentsMapperTest.test4" configurationId="JUnit" />
+    <history-entry file="ElasticSearchTest_test1 - 2020.12.26 at 12h 53m 18s.xml">
+      <configuration name="ElasticSearchTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentsMapperTest_test4 - 2020.11.21 at 13h 17m 55s.xml">
-      <configuration name="StudentsMapperTest.test4" configurationId="JUnit" />
+    <history-entry file="ElasticSearchTest_test1 - 2020.12.26 at 14h 05m 08s.xml">
+      <configuration name="ElasticSearchTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentsMapperTest_test4 - 2020.11.21 at 13h 21m 18s.xml">
-      <configuration name="StudentsMapperTest.test4" configurationId="JUnit" />
+    <history-entry file="ElasticSearchTest_test1 - 2020.12.26 at 14h 08m 03s.xml">
+      <configuration name="ElasticSearchTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentsMapperTest_test4 - 2020.11.21 at 13h 25m 20s.xml">
-      <configuration name="StudentsMapperTest.test4" configurationId="JUnit" />
+    <history-entry file="ElasticSearchTest_test1 - 2020.12.26 at 14h 09m 54s.xml">
+      <configuration name="ElasticSearchTest.test1" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34872000" />
+    <option name="totallyTimeSpent" value="105734000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="818" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="818" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21179625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -442,13 +669,48 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5007299" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5270073" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49343064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Spring" order="6" weight="0.329927" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.329927" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.329927" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.37466487" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="RestServices" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.3297587" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26675603" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.53138685" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.49343064" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Spring" order="6" weight="0.329927" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.329927" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.329927" />
@@ -461,12 +723,12 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.3297587" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="RestServices" order="9" />
       <window_info anchor="right" id="Bean Validation" order="10" weight="0.3297587" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -562,18 +824,15 @@
     </state>
     <state x="690" y="279" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605247655618" />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/pojo/JsonBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="224" column="16" lean-forward="true" selection-start-line="224" selection-start-column="16" selection-end-line="224" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -591,31 +850,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/service/LocationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/pojo/City.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="20" column="27" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/Cov19CnController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/Cov19AboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -633,31 +871,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/leslie/StudentsMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="84" column="40" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/vo/ProvinceVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/vo/CityVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="6" column="30" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/service/impl/LocationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="25" column="53" lean-forward="true" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -675,13 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/LocationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/utils/AlibabaUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -689,12 +899,285 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/java1.8.0/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/utils/JsonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/vo/ProvinceVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/Cov19CnController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Users/leslie.lai/environment/mavenlib/com/baomidou/mybatis-plus-core/3.3.2/mybatis-plus-core-3.3.2.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/utils/RemoteUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/pojo/JsonBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/vo/CountryVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/pojo/Country.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/pojo/Weather.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/Cov19AboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/cons/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/vo/ABTrendVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/AlibabaCov19AbController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/leslie/StudentsMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="213" column="46" selection-start-line="213" selection-start-column="46" selection-end-line="213" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/utils/ABUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/AlibabaCov19CnController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="184" column="31" selection-start-line="184" selection-start-column="24" selection-end-line="184" selection-end-column="31" />
+        <state relative-caret-position="1121">
+          <caret line="112" column="41" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/service/LocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/service/impl/LocationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="25" column="53" lean-forward="true" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/pojo/AbTrend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/pojo/Trend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/pojo/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-156">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/mapper/MessageMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/service/impl/MessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/service/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/java1.8.0/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="134" column="46" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/test/ElasticSearchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/WeatherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/config/ElasticSearchConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" column="85" selection-start-line="14" selection-start-column="85" selection-end-line="14" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/mapper/Cov19Mapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/LocationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/service/NewsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/controller/NewsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/service/impl/NewsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/mapper/NewsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leslie/pojo/News.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+            <element signature="e#1373#1374#0" expanded="true" />
+            <element signature="e#1411#1412#0" expanded="true" />
+            <element signature="e#1473#1474#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
           </folding>
         </state>
       </provider>

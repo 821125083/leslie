@@ -6,31 +6,26 @@ import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 
+import com.leslie.cons.Const;
 import com.leslie.mapper.CityMapper;
 import com.leslie.mapper.ProvinceMapper;
 import com.leslie.mapper.TrendMapper;
-import com.leslie.pojo.City;
-import com.leslie.pojo.Cov19CnRecord;
-import com.leslie.pojo.Province;
-import com.leslie.pojo.Trend;
+import com.leslie.pojo.*;
 import com.leslie.service.LocationService;
+import com.leslie.utils.ABUtils;
 import com.leslie.utils.AlibabaUtils;
 import com.leslie.utils.DataUtils;
 import com.leslie.utils.RemoteUtils;
+import com.leslie.vo.ABTrendVo;
 import com.leslie.vo.CityVO;
-import com.mysql.cj.jdbc.jmx.LoadBalanceConnectionGroupManager;
-import netscape.javascript.JSObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Map;
+import java.rmi.Remote;
+import java.util.*;
 
 @SpringBootTest(classes = App.class)
 @RunWith(SpringRunner.class)
@@ -47,6 +42,9 @@ public class StudentsMapperTest  {
 
     @Autowired
     private CityMapper cityMapper;
+//
+//    @Autowired
+//    private NewsMapper newsMapper;
 
     @Test
     public void test1() throws Exception {
@@ -122,4 +120,97 @@ public class StudentsMapperTest  {
 
     }
 
+//    @Test
+//    public void test5(){
+//        String remoteData = RemoteUtils.getRemoteData("https://cdn.mdeer.com/contentdtos.js");
+//        remoteData = remoteData.substring(20,remoteData.length()-1);
+//        List<News> newsList = JSON.parseArray(remoteData, News.class);
+//        newsList.forEach(news-> System.out.println(news));
+//    }
+
+    @Test
+    public void test6(){
+        String remoteData = RemoteUtils.getRemoteData("https://cdn.mdeer.com/data/yqstaticdata.js");
+        System.out.println(remoteData);
+
+    }
+
+    @Test
+    public void test7(){
+//        String remoteData = RemoteUtils.getRemoteData(Const.newsUrl);
+//        remoteData = remoteData.substring(20, remoteData.length()-1);
+//        List<News> newsList = JSON.parseArray(remoteData, News.class);
+//        newsList.forEach(news -> {
+//            Wrapper wrapper = new QueryWrapper<News>();
+//            ((QueryWrapper) wrapper).eq("content_id", news.getContentId());
+//            News selectNews = newsMapper.selectOne(wrapper);
+//            if (null == selectNews){
+//                newsMapper.insert(news);
+//            }
+//        });
+    }
+
+    @Test
+    public void test8(){
+
+        String remoteData = RemoteUtils.getRemoteData("https://cdn.mdeer.com/data/yqstaticdata.js");
+
+        remoteData = remoteData.substring(19,remoteData.length() - 1);
+        System.out.println(remoteData);
+    }
+
+
+    @Test
+    public void test9(){
+
+        String remoteData = RemoteUtils.getRemoteData(Const.Api163);
+
+        JSONObject jsonObject = JSONObject.parseObject(remoteData);
+
+        Object data = jsonObject.get("data");
+
+        jsonObject = JSONObject.parseObject(data.toString());
+
+        Object areaTree = jsonObject.get("areaTree");
+
+        JSONArray objects = JSONObject.parseArray(areaTree.toString());
+
+        Iterator<Object> iterator = objects.iterator();
+
+        while (iterator.hasNext()){
+            Object next = iterator.next();
+
+            System.out.println(next);
+        }
+    }
+
+    @Test
+    public void test10(){
+        String remoteData = RemoteUtils.getRemoteData(Const.weatherApi.concat(Const.GUANGZHOUWEATHERCODE.toString()));
+        JSONObject jsonObject = JSON.parseObject(remoteData);
+        Object cityInfo = jsonObject.get("cityInfo");
+        Object data = jsonObject.get("data");
+        Object forecast = JSON.parseObject(data.toString()).get("forecast");
+        List<Weather> weathers = JSONObject.parseArray(forecast.toString(), Weather.class);
+        weathers.forEach(System.out::println);
+    }
+
+    @Test
+    public void test11(){
+        String remoteData = RemoteUtils.getRemoteData("https://cdn.mdeer.com/data/yqstaticdata.js");
+        System.out.println(remoteData);
+    }
+
+    @Test
+    public void test12(){
+        ABUtils.abroadIncTread().forEach(trend -> {
+            System.out.println(trend);
+        });
+    }
+
+    @Test
+    public void test13(){
+        List<ABTrendVo> abTrendVos = ABUtils.abroadIncTread();
+        abTrendVos.forEach(System.out::println);
+    }
 }
