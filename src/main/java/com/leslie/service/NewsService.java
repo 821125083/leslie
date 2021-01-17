@@ -10,4 +10,6 @@ public interface NewsService {
     void insertNews(List<News> newsList);
 
     List<News> queryAll();
+
+    List<News> queryNewsByPage(Integer pageNum, Integer pageSize, String searchText);
 }

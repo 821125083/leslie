@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class ElasticSearchConfig {
 
     @Bean
-    public RestHighLevelClient client(){
+    public RestHighLevelClient esClient(){
         return new RestHighLevelClient(RestClient.builder(new HttpHost("127.0.0.1",9200)));
     }
 }

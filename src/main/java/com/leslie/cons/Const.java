@@ -39,4 +39,8 @@ public class Const {
     public final static String weatherApi = "http://t.weather.itboy.net/api/weather/city/";
 
     public final static Integer GUANGZHOUWEATHERCODE = 101280101;
+
+    public final static String ES_NEWS_INDEX = "news_index";
+
+    public final static Integer DEFAULT_PAGE_SIZE = 10;
 }
