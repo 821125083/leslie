@@ -4,9 +4,11 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.leslie.cons.Const;
 import com.leslie.pojo.Country;
+import com.leslie.service.CountryService;
 import com.leslie.utils.RemoteUtils;
 import com.leslie.vo.CountryVO;
 import com.leslie.vo.ResultVO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +24,10 @@ import java.util.stream.Stream;
 @Controller
 @CrossOrigin
 public class AlibabaCov19AbController {
+
+
+    @Autowired
+    private CountryService countryService;
 
     /**
      * 获取疫情全球数据
@@ -80,16 +86,7 @@ public class AlibabaCov19AbController {
             limited = 50;
         }
         List<CountryVO> countryVOS = this.queryCountryVO();
-        countryVOS = countryVOS.parallelStream().limit(limited).collect(Collectors.toList());
-
-        List<Long> confirm = countryVOS.parallelStream().map(CountryVO::getConfirm).collect(Collectors.toList());
-        List<Long> heal = countryVOS.parallelStream().map(CountryVO::getHeal).collect(Collectors.toList());
-        List<Long> dead = countryVOS.parallelStream().map(CountryVO::getDead).collect(Collectors.toList());
-
-        Map<String, Object> result = new HashMap<>();
-        result.put("confirm",confirm);
-        result.put("dead",dead);
-        result.put("heal",heal);
+        Map<String ,Object> result = countryService.countryBarData(countryVOS,limited);
         return ResultVO.success(result);
     }
 }

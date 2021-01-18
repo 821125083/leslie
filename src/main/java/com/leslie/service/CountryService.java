@@ -1,8 +1,10 @@
 package com.leslie.service;
 
 import com.leslie.pojo.Country;
+import com.leslie.vo.CountryVO;
 
 import java.util.List;
+import java.util.Map;
 
 public interface CountryService {
 
@@ -13,4 +15,6 @@ public interface CountryService {
     void addCountry(List<Country> countryList);
 
     List<Country> queryAllCountry();
+
+    Map<String ,Object> countryBarData(List<CountryVO> countryVOS,Integer limited);
 }
