@@ -2,17 +2,17 @@ package com.leslie.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.leslie.cons.Const;
-import com.leslie.exception.AliInterfaceException;
+import com.leslie.pojo.Country;
 import com.leslie.pojo.Province;
-import com.leslie.pojo.Trend;
+import com.leslie.service.CountryService;
 import com.leslie.service.Cov19Service;
 import com.leslie.service.LocationService;
 import com.leslie.utils.AlibabaUtils;
 import com.leslie.utils.RemoteUtils;
 import com.leslie.vo.CityVO;
+import com.leslie.vo.CountryVO;
 import com.leslie.vo.ProvinceVO;
 import com.leslie.vo.ResultVO;
 import org.slf4j.Logger;
@@ -22,6 +22,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
+import java.util.concurrent.atomic.AtomicReference;
 
 @Controller
 @ResponseBody
@@ -34,6 +35,9 @@ public class AlibabaCov19CnController {
 
     @Autowired
     private LocationService locationService;
+
+    @Autowired
+    private CountryService countryService;
 
     private final Logger LOGGER = LoggerFactory.getLogger(AlibabaCov19CnController.class);
 
@@ -79,9 +83,7 @@ public class AlibabaCov19CnController {
         }
 
         JSONArray provinceArray = object.getJSONArray("provinceArray");
-
         ListIterator<Object> iterator = provinceArray.listIterator();
-
         List<CityVO> cityVO = null;
         //省份迭代器
         while (iterator.hasNext()){
@@ -197,7 +199,7 @@ public class AlibabaCov19CnController {
         try {
             jsonObject = AlibabaUtils.requestAlibabaJsonObject();
         } catch (Exception e) {
-            LOGGER.error("error");
+            LOGGER.error("er0");
             return ResultVO.error("阿里妈妈接口蹦了");
         }
         // 转化为java集合对象
@@ -228,35 +230,5 @@ public class AlibabaCov19CnController {
                 province.setProvinceName("新疆");
             }
         });
-
-
     }
-
-    //全球数据
-    @RequestMapping("initAllData")
-    public ResultVO initAllData(){
-        String remoteData = RemoteUtils.getRemoteData(Const.Api163);
-
-        JSONObject jsonObject = JSONObject.parseObject(remoteData);
-
-        Object data = jsonObject.get("data");
-
-        jsonObject = JSONObject.parseObject(data.toString());
-
-        Object areaTree = jsonObject.get("areaTree");
-
-        JSONArray objects = JSONObject.parseArray(areaTree.toString());
-
-        Iterator<Object> iterator = objects.iterator();
-
-        while (iterator.hasNext()){
-            Object next = iterator.next();
-
-            System.out.println(next);
-        }
-        return ResultVO.success(iterator);
-    }
-
-
-
 }

@@ -43,4 +43,10 @@ public class Const {
     public final static String ES_NEWS_INDEX = "news_index";
 
     public final static Integer DEFAULT_PAGE_SIZE = 10;
+
+    /**
+     * 丁香园 全球疫情 api 接口 截止 2020.3.19
+     */
+    @Deprecated
+    public final static String DXY_API = "https://lab.isaaclin.cn/nCoV/api/area";
 }
