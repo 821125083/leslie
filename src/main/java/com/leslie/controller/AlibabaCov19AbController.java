@@ -3,9 +3,11 @@ package com.leslie.controller;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.leslie.cons.Const;
+import com.leslie.cons.SearchEnum;
 import com.leslie.pojo.Country;
 import com.leslie.service.CountryService;
 import com.leslie.utils.RemoteUtils;
+import com.leslie.vo.CityVO;
 import com.leslie.vo.CountryVO;
 import com.leslie.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -39,6 +42,10 @@ public class AlibabaCov19AbController {
         return ResultVO.success(this.queryCountryVO());
     }
 
+    /**
+     * 查询全球的数据
+     * @return
+     */
     private List<CountryVO> queryCountryVO(){
         List<CountryVO> list = new ArrayList<>();
         // 返回JSONArray
@@ -80,7 +87,6 @@ public class AlibabaCov19AbController {
 
     @RequestMapping("initAllAbData/{limited}")
     public ResultVO initAllAbDataByLimit(@PathVariable Integer limited){
-        System.out.println("leslie");
         if (limited == null || limited.equals(0)){
             // 为空或者为零
             limited = 50;
@@ -88,5 +94,40 @@ public class AlibabaCov19AbController {
         List<CountryVO> countryVOS = this.queryCountryVO();
         Map<String ,Object> result = countryService.countryBarData(countryVOS,limited);
         return ResultVO.success(result);
+    }
+
+    /**
+     * 查询条形图
+     * @param limited 查询条数
+     * @param searchType 查询类型 1：确诊 2：死亡 3：治愈 null 查全部
+     * @return
+     */
+    @RequestMapping("initAllAbData/{limited}/{searchType}")
+    public ResultVO initAllAbDataByLimit2(@PathVariable Integer limited,@PathVariable Integer searchType){
+
+        if(limited == null || limited.equals(0)) {
+            limited = 50;
+        }
+        // todo 查询所有数据 重构为一个方法
+        List<CountryVO> countryVOS = this.queryCountryVO();
+        Map<String, Object> map = countryService.countryBarData(countryVOS, limited, searchType);
+        Map<String, Long> data = null;
+        if (searchType == 1){
+            data = (HashMap)map.get("confirmed");
+        }else if (searchType == 2){
+            data = (HashMap)map.get("dead");
+        }else {
+            data = (HashMap)map.get("heal");
+        }
+        List<CountryVO> list = new ArrayList<>();
+
+        data.entrySet().forEach(ent -> {
+            CountryVO countryVO = new CountryVO();
+            countryVO.setName(ent.getKey());
+            countryVO.setHeal(ent.getValue());
+            list.add(countryVO);
+        });
+
+        return ResultVO.success(list);
     }
 }
