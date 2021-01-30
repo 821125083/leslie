@@ -1,15 +1,12 @@
 package com.leslie.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.leslie.cons.Const;
-import com.leslie.cons.SearchEnum;
-import com.leslie.pojo.Country;
 import com.leslie.service.CountryService;
 import com.leslie.utils.RemoteUtils;
-import com.leslie.vo.CityVO;
 import com.leslie.vo.CountryVO;
 import com.leslie.vo.ResultVO;
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,10 +14,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.lang.reflect.Array;
+import java.lang.reflect.Type;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @RequestMapping("AbCov19")
 @ResponseBody
@@ -39,14 +34,15 @@ public class AlibabaCov19AbController {
     @RequestMapping("initAllAbData")
     public ResultVO initAllData(){
 
-        return ResultVO.success(this.queryCountryVO());
+        return ResultVO.success(this.queryCountryVO(true));
     }
 
     /**
+     * total 是否查询全球的数据
      * 查询全球的数据
      * @return
      */
-    private List<CountryVO> queryCountryVO(){
+    private List<CountryVO> queryCountryVO(Boolean total){
         List<CountryVO> list = new ArrayList<>();
         // 返回JSONArray
         Iterator<Object> iterator = JSONObject.parseObject(RemoteUtils.getRemoteData(Const.Api163)).getJSONObject("data").getJSONArray("areaTree").iterator();
@@ -65,7 +61,9 @@ public class AlibabaCov19AbController {
             list.add(countryVO);
         }
         // 添加一条全球数据
-        list.add(this.countGlobalCountVO(list));
+        if (total){
+            list.add(this.countGlobalCountVO(list));
+        }
         // 按照确诊人数从高到低排序
         list.sort(Comparator.comparingLong(countryVO -> {
             return -countryVO.getConfirm();
@@ -91,7 +89,7 @@ public class AlibabaCov19AbController {
             // 为空或者为零
             limited = 50;
         }
-        List<CountryVO> countryVOS = this.queryCountryVO();
+        List<CountryVO> countryVOS = this.queryCountryVO(true);
         Map<String ,Object> result = countryService.countryBarData(countryVOS,limited);
         return ResultVO.success(result);
     }
@@ -109,7 +107,7 @@ public class AlibabaCov19AbController {
             limited = 50;
         }
         // todo 查询所有数据 重构为一个方法
-        List<CountryVO> countryVOS = this.queryCountryVO();
+        List<CountryVO> countryVOS = this.queryCountryVO(true);
         Map<String, Object> map = countryService.countryBarData(countryVOS, limited, searchType);
         Map<String, Long> data = null;
         if (searchType == 1){
@@ -119,6 +117,7 @@ public class AlibabaCov19AbController {
         }else {
             data = (HashMap)map.get("heal");
         }
+
         List<CountryVO> list = new ArrayList<>();
 
         data.entrySet().forEach(ent -> {
@@ -130,4 +129,19 @@ public class AlibabaCov19AbController {
 
         return ResultVO.success(list);
     }
+
+    @RequestMapping("initAllCountryData")
+    @ResponseBody
+    public ResultVO initAllCountryData(){
+        List<CountryVO> list = this.queryCountryVO(false);
+
+        return ResultVO.success(list);
+    }
+
+    @RequestMapping("selectTheWorldCount")
+    @ResponseBody
+    public ResultVO selectTheWorldCount(){
+        return ResultVO.success(this.countGlobalCountVO(this.queryCountryVO(false)));
+    }
+
 }

@@ -22,6 +22,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -32,6 +33,8 @@ public class NewsServiceImpl implements NewsService {
 
     @Autowired
     private RestHighLevelClient esClient;
+
+
 
     @Override
     public void insertNews(List<News> newsList) {
@@ -65,7 +68,6 @@ public class NewsServiceImpl implements NewsService {
             // 没有查询条件
             builder.query(QueryBuilders.matchAllQuery());
         }
-
         request.source(builder);
         SearchResponse response = null;
         try {
@@ -75,13 +77,13 @@ public class NewsServiceImpl implements NewsService {
             for (SearchHit hit : hits) {
                 list.add(JSON.parseObject(hit.getSourceAsString(), News.class));
             }
-
         } catch (IOException e) {
+            // elasticSearch 没连接上 呵呵 从数据库中查找
             QueryWrapper<News> wrapper = new QueryWrapper<>();
+            wrapper.orderByDesc("publish_time");
             e.printStackTrace();
             list = newsMapper.selectList(wrapper);
         }
-
         return list;
     }
 }
