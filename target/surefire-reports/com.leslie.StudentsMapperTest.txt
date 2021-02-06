@@ -1,4 +1,80 @@
 -------------------------------------------------------------------------------
 Test set: com.leslie.StudentsMapperTest
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 69.292 s - in com.leslie.StudentsMapperTest
+Tests run: 12, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 144.411 s <<< FAILURE! - in com.leslie.StudentsMapperTest
+test2  Time elapsed: 34.595 s  <<< ERROR!
+org.springframework.dao.RecoverableDataAccessException: 
+
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,160 milliseconds ago. The last packet sent successfully to the server was 19,160 milliseconds ago.
+### The error may exist in com/leslie/mapper/CityMapper.java (best guess)
+### The error may involve com.leslie.mapper.CityMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO L_city  ( city_name, province_id )  VALUES  ( ?, ? )
+### Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,160 milliseconds ago. The last packet sent successfully to the server was 19,160 milliseconds ago.
+; Communications link failure
+
+The last packet successfully received from the server was 19,160 milliseconds ago. The last packet sent successfully to the server was 19,160 milliseconds ago.; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,160 milliseconds ago. The last packet sent successfully to the server was 19,160 milliseconds ago.
+	at com.leslie.StudentsMapperTest.lambda$null$0(StudentsMapperTest.java:74)
+	at com.leslie.StudentsMapperTest.lambda$test2$1(StudentsMapperTest.java:72)
+	at com.leslie.StudentsMapperTest.test2(StudentsMapperTest.java:67)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet successfully received from the server was 19,160 milliseconds ago. The last packet sent successfully to the server was 19,160 milliseconds ago.
+	at com.leslie.StudentsMapperTest.lambda$null$0(StudentsMapperTest.java:74)
+	at com.leslie.StudentsMapperTest.lambda$test2$1(StudentsMapperTest.java:72)
+	at com.leslie.StudentsMapperTest.test2(StudentsMapperTest.java:67)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: 
+Communications link failure
+
+The last packet successfully received from the server was 19,160 milliseconds ago. The last packet sent successfully to the server was 19,160 milliseconds ago.
+	at com.leslie.StudentsMapperTest.lambda$null$0(StudentsMapperTest.java:74)
+	at com.leslie.StudentsMapperTest.lambda$test2$1(StudentsMapperTest.java:72)
+	at com.leslie.StudentsMapperTest.test2(StudentsMapperTest.java:67)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at com.leslie.StudentsMapperTest.lambda$null$0(StudentsMapperTest.java:74)
+	at com.leslie.StudentsMapperTest.lambda$test2$1(StudentsMapperTest.java:72)
+	at com.leslie.StudentsMapperTest.test2(StudentsMapperTest.java:67)
+
+test3  Time elapsed: 78.765 s  <<< ERROR!
+org.springframework.dao.RecoverableDataAccessException: 
+
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,141 milliseconds ago. The last packet sent successfully to the server was 19,141 milliseconds ago.
+### The error may exist in com/leslie/mapper/TrendMapper.java (best guess)
+### The error may involve com.leslie.mapper.TrendMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO L_trend  ( date, sure_Cnt, die_Cnt, cure_Cnt, doubt_Cnt )  VALUES  ( ?, ?, ?, ?, ? )
+### Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,141 milliseconds ago. The last packet sent successfully to the server was 19,141 milliseconds ago.
+; Communications link failure
+
+The last packet successfully received from the server was 19,141 milliseconds ago. The last packet sent successfully to the server was 19,141 milliseconds ago.; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,141 milliseconds ago. The last packet sent successfully to the server was 19,141 milliseconds ago.
+	at com.leslie.StudentsMapperTest.lambda$test3$2(StudentsMapperTest.java:91)
+	at com.leslie.StudentsMapperTest.test3(StudentsMapperTest.java:90)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet successfully received from the server was 19,141 milliseconds ago. The last packet sent successfully to the server was 19,141 milliseconds ago.
+	at com.leslie.StudentsMapperTest.lambda$test3$2(StudentsMapperTest.java:91)
+	at com.leslie.StudentsMapperTest.test3(StudentsMapperTest.java:90)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: 
+Communications link failure
+
+The last packet successfully received from the server was 19,141 milliseconds ago. The last packet sent successfully to the server was 19,141 milliseconds ago.
+	at com.leslie.StudentsMapperTest.lambda$test3$2(StudentsMapperTest.java:91)
+	at com.leslie.StudentsMapperTest.test3(StudentsMapperTest.java:90)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at com.leslie.StudentsMapperTest.lambda$test3$2(StudentsMapperTest.java:91)
+	at com.leslie.StudentsMapperTest.test3(StudentsMapperTest.java:90)
+

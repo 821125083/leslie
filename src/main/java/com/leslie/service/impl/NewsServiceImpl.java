@@ -86,4 +86,9 @@ public class NewsServiceImpl implements NewsService {
         }
         return list;
     }
+
+    @Override
+    public List<News> queryNotAll() {
+        return newsMapper.queryNotAll();
+    }
 }

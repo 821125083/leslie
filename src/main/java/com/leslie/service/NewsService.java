@@ -12,4 +12,6 @@ public interface NewsService {
     List<News> queryAll();
 
     List<News> queryNewsByPage(Integer pageNum, Integer pageSize, String searchText);
+
+    List<News> queryNotAll();
 }

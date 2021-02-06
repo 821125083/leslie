@@ -6,29 +6,39 @@ import com.leslie.cons.Const;
 import com.leslie.mapper.NewsMapper;
 import com.leslie.pojo.News;
 import com.leslie.service.NewsService;
+import com.leslie.utils.ArrayUtils;
+import com.leslie.utils.ExcelUtils;
 import com.leslie.utils.RemoteUtils;
 import com.leslie.vo.NewsQueryVo;
 import com.leslie.vo.ResultVO;
+import org.apache.http.HttpRequest;
+import org.apache.http.protocol.HttpDateGenerator;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.Strings;
 import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.FileNotFoundException;
+import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.FileNameMap;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @Controller
 @RequestMapping("news")
 @CrossOrigin
 public class NewsController {
-
 
 
     @Autowired
@@ -111,5 +121,32 @@ public class NewsController {
         esClient.bulk(bulkRequest, RequestOptions.DEFAULT);
         return ResultVO.success();
     }
+
+    @RequestMapping("writeNewsToExcel")
+    @ResponseBody
+    public void writeNewsToExcel(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        List<News> newsList = newsService.queryNotAll();
+
+        // 首行标题
+        String[] firstRow  = {"标题","作者名称","发布日期"};
+
+        // 集合转化为二维数组
+        String[][] data = ArrayUtils.toArrays(newsList);
+
+        // 写出到excel中
+        HSSFWorkbook wb = ExcelUtils.writeExcel(data, firstRow);
+        String fileName = "news"+System.currentTimeMillis()+".xls";
+        String downloadFileName =new String(fileName.getBytes("UTF-8"),"iso-8859-1");
+        String headStr ="attachment; filename=\"" + downloadFileName +"\"";
+        response.setContentType("APPLICATION/OCTET-STREAM");
+        response.setCharacterEncoding("utf-8");
+        response.setHeader("Content-Disposition", headStr);
+        OutputStream os = response.getOutputStream();
+        wb.write(os);
+        os.flush();
+        os.close();
+        System.out.println("download");
+    }
+
 
 }
