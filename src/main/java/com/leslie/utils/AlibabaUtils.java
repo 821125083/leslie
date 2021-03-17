@@ -17,17 +17,9 @@ public class AlibabaUtils {
     private static final Logger LOGGER = LoggerFactory.getLogger(AlibabaUtils.class);
 
     public static String requestAlibabaData() throws Exception {
-
         HashMap<String, String> headers = new HashMap<>();
-
         headers.put("Authorization", "APPCODE "+ Const.aliAppCode);
-
         String remoteData = RemoteUtils.getRemoteData(Const.aliUrl, new HashMap<>(), headers);
-//        while (!JSONValidator.fromUtf8(remoteData.getBytes()).validate()){
-//            LOGGER.error("嘿嘿 ~ 阿里接口不行了 {}" ,new Date());
-//            remoteData = RemoteUtils.getRemoteData(Const.aliUrl, new HashMap<>(), headers);
-//        }
-//      接口有可能不行，返回的不是json字符串
         while (!JSON.isValid(remoteData)){
             LOGGER.error("嘿嘿 ~ 阿里接口不行了 {}" ,new Date());
             remoteData = RemoteUtils.getRemoteData(Const.aliUrl, new HashMap<>(), headers);

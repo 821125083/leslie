@@ -2,6 +2,7 @@ package com.leslie.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.leslie.cons.Const;
 import com.leslie.mapper.NewsMapper;
 import com.leslie.pojo.News;
@@ -66,6 +67,7 @@ public class NewsController {
 
     private List<News> queryRecentNews(){
         String remoteData = RemoteUtils.getRemoteData(Const.newsUrl);
+        JSONObject jsonObject = new JSONObject();
         List<News> newsList = JSONArray.parseArray(remoteData.substring(20, remoteData.length() - 1), News.class);
         return newsList;
     }

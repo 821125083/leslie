@@ -1,8 +1,11 @@
 package com.leslie.utils;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.leslie.pojo.Cov19CnRecord;
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpRequestBase;
@@ -16,6 +19,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,7 +39,7 @@ public class RemoteUtils {
      *
      */
     public static String getRemoteData(String url, Map<String,String> params ,Map<String,String > headers) {
-        //拼接请求参数
+        // 拼接请求参数
         if (null != params && params.size() > 0){
             String param = "?";
             for (Map.Entry<String, String> entry : params.entrySet()) {
@@ -69,12 +73,12 @@ public class RemoteUtils {
             //获得返回的数据
             rep = EntityUtils.toString(response.getEntity(), "UTF-8");
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }finally {
             try {
                 client.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                LOGGER.error(e.getMessage());
             }
         }
         return rep;
@@ -82,6 +86,36 @@ public class RemoteUtils {
 
     public static String getRemoteData(String url){
         return getRemoteData(url,new HashMap<String,String>(),new HashMap<String, String>());
+    }
+
+
+//    public static String request() throws Exception{
+//        //创建请求 get、put、post、delete 对象
+//        HttpRequestBase request = new HttpGet();
+//        //封装请求数据 请求头请求体
+//        request.setURI(url);
+//        request.setHeader(header);
+//        request.setConfig(config);
+//        // 创建请求客户端对象
+//        HttpClient httpClient = new HttpClient();
+//        HttpEntity httpEntity = null;
+//        // 客户点发送请
+//        HttpResponse execute = httpClient.execute(request);
+//        // 得到服务段返回数据
+//        HttpEntity entity = execute.getEntity();
+//        return EntityUtils.toString(entity);
+//    }
+    public String JSON() throws Exception{
+
+        // JAVA 对象转化为字符串
+//        String jsonStr = JSON.toJSONString(entity);
+//        // json格式字符串转化为list集合
+//        List<T> tlist = JSONArray.parseArray(jsonStr, T.class);
+//        // json格式字符串转化为Java对象
+//        T t = JSON.parseObject(jsonStr, T.class);
+
+
+        return "";
     }
 
 }
