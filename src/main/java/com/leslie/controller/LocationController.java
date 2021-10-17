@@ -9,6 +9,7 @@ import com.leslie.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -29,6 +30,9 @@ public class LocationController {
     @Autowired
     private CountryService countryService;
 
+    @Autowired
+    private ProvinceMapper provinceMapper;
+
     @RequestMapping("/allProvinces")
     public ResultVO queryAllProvince(){
         List<Province> provinces = locationService.queryAllCnProvince();
@@ -39,6 +43,11 @@ public class LocationController {
     public ResultVO queryAllCountry(){
         List<Country> countryList = countryService.queryAllCountry();
         return ResultVO.success(countryList);
+    }
+
+    @RequestMapping("/queryProvinceByNameAndId/{provinceName}/{provinceId}")
+    public ResultVO queryProvinceByNameAndId(@PathVariable("provinceName") String provinceName,@PathVariable("provinceId") Integer provinceId){
+        return ResultVO.success(provinceMapper.queryProvinceByNameAndId(provinceId,provinceName));
     }
 
 }

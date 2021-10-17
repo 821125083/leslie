@@ -1,5 +1,6 @@
 package com.leslie.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.leslie.pojo.News;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,9 @@ public interface NewsService {
 
     List<News> queryAll();
 
-    List<News> queryNewsByPage(Integer pageNum, Integer pageSize, String searchText);
+    List<News> queryNewsByPageFromES(Integer pageNum, Integer pageSize, String searchText);
 
     List<News> queryNotAll();
+
+    Page<News> queryNewsByPage(Integer pageNum, Integer pageSize, String searchText);
 }

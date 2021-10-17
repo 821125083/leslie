@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.lang.reflect.Type;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @RequestMapping("AbCov19")
 @ResponseBody
@@ -26,16 +27,6 @@ public class AlibabaCov19AbController {
 
     @Autowired
     private CountryService countryService;
-
-    /**
-     * 获取疫情全球数据
-     * @return result
-     */
-    @RequestMapping("initAllAbData")
-    public ResultVO initAllData(){
-
-        return ResultVO.success(this.queryCountryVO(true));
-    }
 
     /**
      * total 是否查询全球的数据
@@ -83,6 +74,21 @@ public class AlibabaCov19AbController {
         return countryVO;
     }
 
+    /**
+     * 获取疫情全球数据
+     * @return result
+     */
+    @RequestMapping("initAllAbroadData/{limited}")
+    public ResultVO initAllData(@PathVariable Integer limited){
+        List<CountryVO> countryVOS = null;
+        if (limited !=null && limited !=0){
+            countryVOS = this.queryCountryVO(true).stream().limit(limited).collect(Collectors.toList());
+        }else{
+            countryVOS = this.queryCountryVO(true);
+        }
+        return ResultVO.success(countryVOS);
+    }
+
     @RequestMapping("initAllAbData/{limited}")
     public ResultVO initAllAbDataByLimit(@PathVariable Integer limited){
         if (limited == null || limited.equals(0)){
@@ -90,8 +96,8 @@ public class AlibabaCov19AbController {
             limited = 50;
         }
         List<CountryVO> countryVOS = this.queryCountryVO(true);
-        Map<String ,Object> result = countryService.countryBarData(countryVOS,limited);
-        return ResultVO.success(result);
+        Map<String, Object> stringObjectMap = countryService.countryBarData(countryVOS, limited);
+        return ResultVO.success(stringObjectMap);
     }
 
     /**
@@ -133,9 +139,7 @@ public class AlibabaCov19AbController {
     @RequestMapping("initAllCountryData")
     @ResponseBody
     public ResultVO initAllCountryData(){
-        List<CountryVO> list = this.queryCountryVO(false);
-
-        return ResultVO.success(list);
+        return ResultVO.success(this.queryCountryVO(false));
     }
 
     @RequestMapping("selectTheWorldCount")

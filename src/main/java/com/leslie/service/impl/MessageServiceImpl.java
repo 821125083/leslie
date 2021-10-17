@@ -13,7 +13,7 @@ public class MessageServiceImpl implements MessageService {
     private MessageMapper messageMapper;
 
     @Override
-    public void insertMessage(Message mes) {
-        messageMapper.insert(mes);
+    public Integer insertMessage(Message mes) {
+        return messageMapper.insert(mes);
     }
 }

@@ -2,6 +2,7 @@ package com.leslie.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.leslie.cons.Const;
+//import com.leslie.kafka.MessageProducer;
 import com.leslie.pojo.Message;
 import com.leslie.pojo.Weather;
 import com.leslie.service.MessageService;
@@ -28,8 +29,9 @@ public class WeatherController {
     @Autowired
     private MessageService messageService;
 
-    @Autowired
-    private RestHighLevelClient client;
+//    @Autowired
+//    private MessageProducer messageProducer;
+
 
     @RequestMapping("initWeatherData")
     public ResultVO initWeatherData(){
@@ -50,8 +52,20 @@ public class WeatherController {
         Message mes = new Message();
         mes.setMessage(message.replace("=",""));
         mes.setCreateDate(new Date());
-        messageService.insertMessage(mes);
+        String proxy = request.getHeader("x-forwarded-for");
+        mes.setIpAddr(proxy == null ? request.getRemoteAddr() : proxy);
+        Integer integer = messageService.insertMessage(mes);
+//        if (integer != null && integer > 0) {
+//            try {
+//                messageProducer.sendMessage(message, "leslieTopic");
+//            }catch (Exception e){
+//                System.out.println("E20");
+//            }
+//        }
+
     }
+
+
 
 
 }

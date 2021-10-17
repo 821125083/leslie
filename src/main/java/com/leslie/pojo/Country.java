@@ -5,11 +5,13 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
+import java.io.Serializable;
+
 /**
  * 国家
  */
 @TableName("L_country")
-public class Country {
+public class Country implements Serializable {
 
     @TableField("country_name")
     private String name;

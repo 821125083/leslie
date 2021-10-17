@@ -19,10 +19,10 @@ public class MybatisPlusConfig {
 //        return new OptimisticLockerInterceptor();
 //    }
 //    //分页
-//    @Bean
-//    public PaginationInterceptor paginationInterceptor(){
-//        return new PaginationInterceptor();
-//    }
+    @Bean
+    public PaginationInterceptor paginationInterceptor(){
+        return new PaginationInterceptor();
+    }
 //
 //    //软删除
 //    @Bean
@@ -31,6 +31,6 @@ public class MybatisPlusConfig {
 //        return null;
 //    }
 
-    }
+}
 
 

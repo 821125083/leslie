@@ -2,7 +2,7 @@ package com.leslie.vo;
 
 public class ResultVO {
 
-    private Integer code;
+    private Integer code;//
 
     private String message;
 
@@ -38,8 +38,6 @@ public class ResultVO {
         this.message = message;
         this.data = data;
     }
-
-
 
     public Integer getCode() {
         return code;

@@ -16,6 +16,16 @@ public class Message {
 
     private Date createDate;
 
+    private String ipAddr;
+
+    public String getIpAddr() {
+        return ipAddr;
+    }
+
+    public void setIpAddr(String ipAddr) {
+        this.ipAddr = ipAddr;
+    }
+
     public Integer getId() {
         return id;
     }

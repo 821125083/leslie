@@ -1,4 +1,14 @@
 spring:
+#  kafka:
+#    bootstrap-servers: http://134.175.174.110:9092
+#    consumer:
+#      groupId: myGroup
+#      keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      valueDserializer: org.apache.kafka.common.serialization.StringDeserializer
+#    producer:
+#      groupId: myGroup
+#      keyDeserializer: org.apache.kafka.common.serialization.StringSerializer
+#      valueDserializer: org.apache.kafka.common.serialization.StringSerializer
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://134.175.174.110:4396/cov19?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai

@@ -21,4 +21,5 @@ public interface CountryService {
     Map<String ,Object> countryBarData(List<CountryVO> countryVOS,Integer limited,Integer searchType);
 
     List<CountryVO> readCountryBarData(List<CountryVO> countryVOS, Integer limited, Integer searchType);
+
 }

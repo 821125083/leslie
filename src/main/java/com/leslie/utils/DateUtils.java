@@ -15,4 +15,11 @@ public class DateUtils {
         LocalDate parse = LocalDate.parse(format1, DateTimeFormatter.ofPattern(format));
         return null;
     }
+
+    public static String nowDateString(){
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        return sdf.format(new Date());
+
+    }
 }

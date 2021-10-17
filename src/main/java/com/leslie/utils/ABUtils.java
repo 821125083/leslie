@@ -20,12 +20,8 @@ public class ABUtils {
 
     //获得国外疫情趋势数据
     public static List<ABTrendVo> abroadIncTread(){
-
         JSONObject jsonObject = remoteObject();
-
         Object intTrend = jsonObject.get("intTrend");
-
         return JSON.parseArray(intTrend.toString(), ABTrendVo.class);
     }
-
 }

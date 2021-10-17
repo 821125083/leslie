@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.stream.Collectors;
 
 @Controller
 @ResponseBody
@@ -54,8 +55,8 @@ public class AlibabaCov19CnController {
      * 省份表格数据
      * @return
      */
-    @RequestMapping("cov19ProvinceTableData")
-    public ResultVO provinceTableData(){
+    @RequestMapping("cov19ProvinceTableData/{pageSize}/{pageNum}")
+    public ResultVO provinceTableData(@PathVariable Integer pageSize,@PathVariable Integer pageNum){
         JSONObject jsonObject = null;
         try {
             jsonObject = AlibabaUtils.requestAlibabaJsonObject();
@@ -64,7 +65,9 @@ public class AlibabaCov19CnController {
             return ResultVO.error("阿里接口不行了");
         }
         List<ProvinceVO> provinceArray = JSONObject.parseArray(jsonObject.get("provinceArray").toString(), ProvinceVO.class);
-
+        if (pageNum!=100){
+            provinceArray = provinceArray.stream().limit(pageSize).collect(Collectors.toList());
+        }
         return ResultVO.success(provinceArray);
     }
 
@@ -168,7 +171,7 @@ public class AlibabaCov19CnController {
         try {
             jsonObject = AlibabaUtils.requestAlibabaJsonObject();
         } catch (Exception e) {
-            return ResultVO.error("vipshop");
+            return ResultVO.error("vip shop");
         }
 
         ListIterator<Object> iterator = jsonObject.getJSONArray("provinceArray").listIterator();

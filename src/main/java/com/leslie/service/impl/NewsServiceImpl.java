@@ -2,6 +2,7 @@ package com.leslie.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.leslie.mapper.NewsMapper;
 import com.leslie.pojo.News;
 import com.leslie.service.NewsService;
@@ -52,7 +53,7 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
-    public List<News> queryNewsByPage(Integer pageNum, Integer pageSize, String searchText) {
+    public List<News> queryNewsByPageFromES(Integer pageNum, Integer pageSize, String searchText) {
         List<News> list = new ArrayList<>();
 
         SearchRequest request = new SearchRequest("news");
@@ -90,5 +91,13 @@ public class NewsServiceImpl implements NewsService {
     @Override
     public List<News> queryNotAll() {
         return newsMapper.queryNotAll();
+    }
+
+    @Override
+    public Page<News> queryNewsByPage(Integer pageNum, Integer pageSize, String searchText) {
+        QueryWrapper<News> wrapper = new QueryWrapper<>();
+        wrapper.orderByDesc("publish_time");
+        Page<News> page = new Page<>(pageNum, pageSize);
+        return newsMapper.selectPage(page, wrapper);
     }
 }

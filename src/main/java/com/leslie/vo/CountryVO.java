@@ -1,10 +1,12 @@
 package com.leslie.vo;
 
 import com.leslie.pojo.Country;
+import org.springframework.cache.annotation.EnableCaching;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class CountryVO extends Country {
+public class CountryVO extends Country  {
 
     private Long confirm;
 

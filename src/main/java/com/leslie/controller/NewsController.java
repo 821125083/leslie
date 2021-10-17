@@ -3,6 +3,7 @@ package com.leslie.controller;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.leslie.cons.Const;
 import com.leslie.mapper.NewsMapper;
 import com.leslie.pojo.News;
@@ -101,8 +102,9 @@ public class NewsController {
             newsQueryVo.setPageSize(Const.DEFAULT_PAGE_SIZE);
         }
 
-        List<News> news = newsService.queryNewsByPage(newsQueryVo.getPageNum(), newsQueryVo.getPageSize(), newsQueryVo.getSearchText());
-        result.put("newsList", news);
+        Page<News> news = newsService.queryNewsByPage(newsQueryVo.getPageNum(), newsQueryVo.getPageSize(), newsQueryVo.getSearchText());
+        result.put("page", news);
+
         return ResultVO.success(result);
     }
 
