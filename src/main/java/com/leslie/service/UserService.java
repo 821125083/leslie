@@ -6,4 +6,5 @@ public interface UserService {
 
     User login(String loginName ,String loginPassword);
 
+    boolean checkLogin(String username, String password);
 }
