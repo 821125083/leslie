@@ -24,11 +24,14 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     private UserDetailsService userDetailsService;
 
     @Autowired
+    private MyAuthenticationSuccessHandler myAuthenticationSuccessHandler;
+
+
+    @Autowired
     BCryptPasswordEncoderUtil bCryptPasswordEncoderUtil;
 
     @Autowired
     public void configureAuthentication(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
-//        authenticationManagerBuilder.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoderUtil);
         authenticationManagerBuilder.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoderUtil);
     }
 
@@ -84,7 +87,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     MyUsernamePasswordAuthenticationFilter myUsernamePasswordAuthenticationFilter() throws Exception {
         MyUsernamePasswordAuthenticationFilter filter = new MyUsernamePasswordAuthenticationFilter();
         //成功后处理
-//        filter.setAuthenticationSuccessHandler(myAuthenticationSuccessHandler);
+        filter.setAuthenticationSuccessHandler(myAuthenticationSuccessHandler);
 //        //失败后处理
 //        filter.setAuthenticationFailureHandler(myAuthenticationFailureHandler);
 

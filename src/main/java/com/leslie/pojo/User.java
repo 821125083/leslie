@@ -1,12 +1,15 @@
 package com.leslie.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 @TableName("L_user")
+@Data
 public class User {
 
-    @TableId
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     private String userName;
@@ -15,35 +18,4 @@ public class User {
 
     private String loginPassword;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getLoginName() {
-        return loginName;
-    }
-
-    public void setLoginName(String logingName) {
-        this.loginName = logingName;
-    }
-
-    public String getLoginPassword() {
-        return loginPassword;
-    }
-
-    public void setLoginPassword(String loginPassword) {
-        this.loginPassword = loginPassword;
-    }
 }

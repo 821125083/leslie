@@ -33,7 +33,6 @@ public class MyUsernamePasswordAuthenticationFilter extends UsernamePasswordAuth
             //用try with resource，方便自动释放资源
             try (InputStream is = request.getInputStream()) {
                 authenticationBean = mapper.readValue(is, Map.class);
-                System.out.println("authenticationBean = " + authenticationBean);
             } catch (IOException e) {
                 //将异常放到自定义的异常类中
                 throw  new IllegalAccessError(e.getMessage());
@@ -41,15 +40,16 @@ public class MyUsernamePasswordAuthenticationFilter extends UsernamePasswordAuth
             try {
                 if (!authenticationBean.isEmpty()) {
                     //获得账号、密码
-                    String username = authenticationBean.get("name");
-                    String password = authenticationBean.get(SPRING_SECURITY_FORM_PASSWORD_KEY);
-
+                    String username = authenticationBean.get("loginName");
+                    String password = authenticationBean.get("loginPassword");
                     //检测账号、密码是否存在
                     if (userService.checkLogin(username, password)) {
                         //将账号、密码装入UsernamePasswordAuthenticationToken中
                         authRequest = new UsernamePasswordAuthenticationToken(username, password);
                         setDetails(request, authRequest);
-                        return this.getAuthenticationManager().authenticate(authRequest);
+                        final Authentication authenticate = this.getAuthenticationManager().authenticate(authRequest);
+                        System.out.println("authenticate = " + authenticate);
+                        return authenticate;
                     }
                 }
             } catch (Exception e) {
