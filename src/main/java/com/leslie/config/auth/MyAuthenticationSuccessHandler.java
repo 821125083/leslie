@@ -31,11 +31,8 @@ public class MyAuthenticationSuccessHandler extends JSONAuthentication implement
         //取得账号信息
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        //
-        System.out.println("userDetails = " + userDetails);
         Map<String,Object> map = new HashMap<>();
         map.put("username",userDetails.getUsername());
-        map.put("auth",userDetails.getAuthorities());
         //装入token
         R<Map<String,Object>> data = R.ok(map);
         //输出

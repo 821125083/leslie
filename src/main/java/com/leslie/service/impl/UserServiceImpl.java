@@ -31,6 +31,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean checkLogin(String username, String password) {
+        System.out.println("checkLogin");
         QueryWrapper<User> wrapper = new QueryWrapper<>();
         User user = new User();
         user.setLoginName(username);
@@ -44,7 +45,7 @@ public class UserServiceImpl implements UserService {
         } else if (!bCryptPasswordEncoderUtil.matches(password,list.get(0).getLoginPassword())) {
            throw new IllegalArgumentException("密码错误了");
         }
-        return password.equals(list.get(0).getLoginPassword());
+        return bCryptPasswordEncoderUtil.matches(password,list.get(0).getLoginPassword());
     }
 
     @Override
